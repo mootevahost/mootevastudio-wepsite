@@ -802,3 +802,72 @@ html, body {
         transition-delay: 0ms !important;
     }
 }
+
+
+/* Coming Soon social links */
+.coming-soon-socials {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: clamp(28px, 6vh, 58px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease 1s;
+}
+
+.experience.coming-soon-active .coming-soon-socials {
+    opacity: 1;
+}
+
+.coming-soon-socials a {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    color: rgba(245, 241, 233, .72);
+    border: 1px solid rgba(224, 126, 65, .28);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .025);
+    transition: color .25s ease, border-color .25s ease, background .25s ease, transform .25s ease;
+}
+
+.coming-soon-socials a:hover,
+.coming-soon-socials a:focus-visible {
+    color: #f4a36b;
+    border-color: rgba(244, 163, 107, .8);
+    background: rgba(224, 126, 65, .1);
+    transform: translateY(-3px);
+    outline: none;
+}
+
+.coming-soon-socials svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.coming-soon-socials a:first-child svg,
+.coming-soon-socials .icon-fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+@media (max-width: 600px) {
+    .coming-soon-socials {
+        bottom: 26px;
+        gap: 18px;
+    }
+
+    .coming-soon-socials a {
+        width: 40px;
+        height: 40px;
+    }
+}

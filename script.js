@@ -213,6 +213,7 @@ function startFallSequence() {
         fallSequence.replaceChildren();
         experience.classList.remove("fall-active");
         experience.classList.add("fall-impact");
+        experience.classList.add("coming-soon-active");
     }, 5000);
 }
 
